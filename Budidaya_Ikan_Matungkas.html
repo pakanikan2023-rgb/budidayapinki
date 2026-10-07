@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Budidaya Ikan Matungkas</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--head:#e2dccf;--bg:#eeeae2;--card:#f8f5ef;--ink:#2f2e2b;--mut:#8a857a;--line:#d9d3c6;--acc:#6b7260;--accink:#f8f5ef;--soft:#e8e3d8;--p1:#e9e4d9;--p2:#e3dbcd;--p3:#dce0d1;--p4:#e7e0cd;--bad:#a4513f;--good:#5f6f4a;--shadow:0 1px 0 rgba(47,46,43,.04),0 8px 20px -16px rgba(47,46,43,.35);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--head:#34332f;--bg:#262522;--card:#302f2b;--ink:#ece8df;--mut:#a39e91;--line:#45433d;--acc:#9aa38a;--accink:#1f2119;--soft:#3a3934;--p1:#3b3a35;--p2:#3f3b34;--p3:#394035;--p4:#403d33;--bad:#e49883;--good:#b3c996;--shadow:0 8px 20px -14px rgba(0,0,0,.55)}}
+:root[data-theme="dark"]{--head:#3a2f3f;--bg:#24222b;--card:#322e3a;--ink:#efe8ee;--mut:#b3a9b8;--line:#47404e;--acc:#e9aab6;--accink:#2e1520;--soft:#3e3846;--p1:#433a4a;--p2:#4a3540;--p3:#38443a;--p4:#4a4532;--bad:#ee9480;--good:#b3d08c;--shadow:0 10px 24px -14px rgba(0,0,0,.55)}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:600 15.5px/1.55 "DM Sans",system-ui,sans-serif}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;margin:12px 12px 0;border-radius:18px;padding:16px 18px 12px;background:var(--head);border:1px solid var(--line);box-shadow:var(--shadow)}
+header:before{content:"SISTEM PENCATATAN";display:block;font-size:10.5px;font-weight:700;letter-spacing:.2em;color:var(--mut);margin-bottom:4px}
+header h1{margin:0;font-size:24px;font-weight:800;letter-spacing:-.4px;line-height:1.2}
+nav{display:flex;gap:6px;overflow-x:auto;margin-top:12px;padding-bottom:2px;scrollbar-width:none}nav::-webkit-scrollbar{display:none}
+nav button{flex:none;border:0;background:rgba(248,245,239,.55);color:var(--mut);font:700 13.5px inherit;font-family:inherit;padding:8px 15px;border-radius:10px;cursor:pointer;transition:background .15s,color .15s}
+nav button:hover{background:var(--p1);color:var(--ink)}
+nav button.on{background:var(--acc);color:var(--accink)}
+main{max-width:900px;margin:0 auto;padding:22px 14px 48px}
+h2{margin:4px 0 14px;font-size:22px;font-weight:800;letter-spacing:-.3px}
+h3{margin:26px 0 10px;font-size:13px;font-weight:800;color:var(--mut);letter-spacing:.04em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:14px;box-shadow:var(--shadow)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:14px}
+.stat{border-radius:16px;padding:14px 16px;background:var(--p1);border:1px solid transparent}
+.stat:nth-child(4n+2){background:var(--p2)}.stat:nth-child(4n+3){background:var(--p3)}.stat:nth-child(4n+4){background:var(--p4)}
+.stat small{color:var(--mut);display:block;font-size:12px;font-weight:700}.stat b{font-size:21px;font-weight:800}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
+button.b,.b{border:0;background:var(--acc);color:var(--accink);font:700 14px inherit;font-family:inherit;padding:10px 18px;border-radius:10px;cursor:pointer;transition:transform .12s,filter .12s}
+button.b:hover{filter:brightness(.97);transform:translateY(-1px)}
+button.b.alt{background:var(--soft);color:var(--ink)}
+button.x{border:0;background:none;color:var(--bad);cursor:pointer;font:inherit;padding:4px 8px;border-radius:8px}button.x:hover{background:var(--p2)}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.tw{overflow-x:auto;padding:6px 8px}table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{color:var(--mut);font-weight:800;font-size:12px}
+tr:last-child td{border-bottom:0}tr:hover>td{background:var(--soft)}
+td.r,th.r{text-align:right}
+.in{color:var(--good)}.out{color:var(--bad)}.mut{color:var(--mut)}
+.line{display:flex;justify-content:space-between;padding:5px 0}
+.empty{color:var(--mut);padding:18px 6px;text-align:center}
+.ov{position:fixed;inset:0;background:rgba(38,37,34,.45);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);display:flex;align-items:flex-end;justify-content:center;z-index:9}
+.mod{background:var(--card);width:100%;max-width:470px;border-radius:20px 20px 0 0;padding:22px 20px calc(22px + env(safe-area-inset-bottom,0px));max-height:92%;overflow:auto}
+@media(min-width:600px){.ov{align-items:center}.mod{border-radius:20px}header{margin:14px auto 0;max-width:872px}}
+label{display:block;font-weight:700;margin:12px 0 5px;font-size:13px;color:var(--mut)}
+input,select{width:100%;font:inherit;font-family:inherit;padding:11px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--soft);color:var(--ink)}
+input:focus,select:focus{border-color:var(--acc)}
+.tot{background:var(--p3);border-radius:12px;padding:12px 14px;margin-top:14px;font-weight:800}
+</style>
+</head>
+<body>
+<header><h1>Budidaya Ikan Matungkas</h1><nav id="nav"></nav></header>
+<main id="app"></main>
+<script>
+const K='telagaance_v1';
+let S=null;try{S=JSON.parse(localStorage.getItem(K))}catch(e){}
+if(!S)S={petani:[{id:1,nama:'Ance',bagi:45},{id:2,nama:'Karel',bagi:0}],bud:[],masuk:[],keluar:[],uang:[],n:10};
+const HRG0={'781-2':{jual:445000},'781-3':{jual:445000},'785-3':{jual:361000},'T-3':{jual:660000,beli:660000}};
+function ensureHrg(){if(!S.hrg)S.hrg=JSON.parse(JSON.stringify(HRG0));
+ Object.keys(S.hrg).forEach(k=>{if(!Array.isArray(S.hrg[k]))S.hrg[k]=[{tgl:'2000-01-01',...S.hrg[k]}]})}
+ensureHrg();
+const key=k=>String(k||'').trim().toUpperCase();
+const hg=(k,t)=>{t=t||new Date().toISOString().slice(0,10);let r={};(S.hrg[key(k)]||[]).slice().sort((x,y)=>x.tgl.localeCompare(y.tgl)).forEach(e=>{if(e.tgl<=t)r=e});return r};
+let tab='dash',bulan='';
+const TABS=[['dash','🏠 Dashboard'],['petani','👨‍🌾 Petani'],['bud','🐟 Budidaya'],['pakan','🌾 Pakan'],['uang','💰 Keuangan']];
+const $=s=>document.querySelector(s);
+const rp=n=>'Rp'+Math.round(n||0).toLocaleString('id-ID');
+const tg=d=>d?d.split('-').reverse().join('/'):'';
+const today=()=>new Date().toISOString().slice(0,10);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const pn=id=>(S.petani.find(p=>p.id==id)||{nama:'?'}).nama;
+const inM=r=>!bulan||(r.tgl||'').startsWith(bulan);
+let DB=null,dbRef=null,lastJ='';
+function setSync(t){const e=document.getElementById('sync');if(e)e.textContent=t}
+function push(){if(!dbRef)return;lastJ=JSON.stringify(S);dbRef.set({json:lastJ,t:Date.now()}).then(()=>setSync('✓ Tersinkron')).catch(e=>setSync(e&&e.code==='invalid_argument'?'Akun ini hanya bisa melihat (tidak bisa mengubah).':'Gagal sinkron, data tersimpan di perangkat ini.'))}
+function save(){try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}push();render()}
+function del(list,id){if(confirm('Hapus catatan ini?')){S[list]=S[list].filter(r=>r.id!=id);save()}}
+
+function form(title,fields,onSave,extra){
+ const ov=document.createElement('div');ov.className='ov';
+ const dl=fields.filter(f=>f.list).map(f=>`<datalist id="dl_${f.k}">${f.list.map(o=>`<option value="${esc(o)}">`).join('')}</datalist>`).join('');
+ ov.innerHTML=`<div class="mod" role="dialog" aria-label="${esc(title)}"><h2>${esc(title)}</h2>${fields.map(f=>`<label for="f_${f.k}">${f.l}</label>`+(f.opts?`<select id="f_${f.k}">${f.opts.map(o=>`<option value="${esc(o[0])}"${o[0]==f.v?' selected':''}>${esc(o[1])}</option>`).join('')}</select>`:`<input id="f_${f.k}" type="${f.t||'text'}" value="${esc(f.v??'')}"${f.list?` list="dl_${f.k}"`:''}${f.t=='number'?' inputmode="decimal" step="any" min="0"':''}>`)).join('')}${dl}${extra?'<div class="tot" id="tot"></div>':''}<div class="row" style="margin-top:16px"><button class="b" id="ok">Simpan</button><button class="b alt" id="no">Batal</button></div></div>`;
+ document.body.appendChild(ov);
+ const g=k=>ov.querySelector('#f_'+k).value;
+ const upd=()=>{if(extra)ov.querySelector('#tot').textContent=extra(g)};
+ ov.addEventListener('input',upd);upd();
+ ov.querySelector('#no').onclick=()=>ov.remove();
+ ov.onclick=e=>{if(e.target===ov)ov.remove()};
+ ov.querySelector('#ok').onclick=()=>{const o={};fields.forEach(f=>o[f.k]=f.t=='number'?parseFloat(g(f.k))||0:g(f.k));if(onSave(o)!==false)ov.remove()};
+ const first=ov.querySelector('input,select');first&&first.focus();
+}
+const petOpts=()=>S.petani.map(p=>[p.id,p.nama]);
+
+function addPetani(p){form(p?'Ubah petani':'Tambah petani',[{k:'nama',l:'Nama petani',v:p?.nama},{k:'bagi',l:'Bagi hasil (%)',t:'number',v:p?.bagi??0}],o=>{
+ if(!o.nama.trim())return alert('Nama petani wajib diisi.')&&false;
+ if(o.bagi>100)return alert('Bagi hasil maksimal 100%.')&&false;
+ if(p){p.nama=o.nama.trim();p.bagi=o.bagi}else S.petani.push({id:S.n++,nama:o.nama.trim(),bagi:o.bagi});save()})}
+function delPetani(id){const n=['bud','keluar','uang'].reduce((a,l)=>a+S[l].filter(r=>r.petani==id).length,0);
+ if(!confirm('Hapus petani '+pn(id)+'?'+(n?' Ada '+n+' catatan milik petani ini yang ikut terhapus.':'')))return;
+ S.petani=S.petani.filter(p=>p.id!=id);['bud','keluar','uang'].forEach(l=>S[l]=S[l].filter(r=>r.petani!=id));save()}
+function addBud(){const jenis=['Bibit Mujair','Bibit Nila','Pakan Tepung','Obat / Vitamin','Lainnya'];
+ form('Tambah transaksi budidaya',[{k:'petani',l:'Petani',opts:petOpts()},{k:'tgl',l:'Tanggal',t:'date',v:today()},{k:'jenis',l:'Jenis',list:jenis,v:jenis[0]},{k:'jumlah',l:'Jumlah',t:'number'},{k:'harga',l:'Harga satuan (Rp)',t:'number'}],
+ o=>{if(!o.jumlah||!o.harga)return alert('Isi jumlah dan harga.')&&false;S.bud.push({id:S.n++,...o});save()},g=>'Total: '+rp((parseFloat(g('jumlah'))||0)*(parseFloat(g('harga'))||0)))}
+const kodes=()=>[...new Set([...S.masuk,...S.keluar].map(r=>r.kode))];
+function stok(k){return S.masuk.filter(r=>r.kode==k).reduce((a,r)=>a+r.jumlah,0)-S.keluar.filter(r=>r.kode==k).reduce((a,r)=>a+r.jumlah,0)}
+function hpp(k,t){let m=S.masuk.filter(r=>r.kode==k&&(!t||r.tgl<=t));if(!m.length)m=S.masuk.filter(r=>r.kode==k);const q=m.reduce((a,r)=>a+r.jumlah,0);return q?m.reduce((a,r)=>a+r.jumlah*r.harga,0)/q:0}
+const hj=r=>r.harga||hg(r.kode,r.tgl).jual||hpp(r.kode,r.tgl);
+function hbeli(k,t){const m=S.masuk.filter(r=>key(r.kode)==key(k)&&r.harga>0).sort((a,b)=>(a.tgl||'').localeCompare(b.tgl||'')||a.id-b.id);if(!m.length)return 0;let r=m[0];m.forEach(x=>{if(!t||x.tgl<=t)r=x});return r.harga}
+const bm=r=>r.modal||hbeli(r.kode,r.tgl)||hg(r.kode,r.tgl).beli||hpp(r.kode,r.tgl);
+const untung=r=>r.jumlah*(hj(r)-bm(r));
+function addMasuk(){form('Pakan masuk',[{k:'tgl',l:'Tanggal',t:'date',v:today()},{k:'kode',l:'Kode pakan',list:kodes()},{k:'jumlah',l:'Jumlah (sak)',t:'number'},{k:'harga',l:'Harga per sak (Rp)',t:'number'},{k:'ket',l:'Keterangan'}],
+ o=>{o.kode=o.kode.trim();if(!o.kode||!o.jumlah)return alert('Isi kode dan jumlah.')&&false;S.masuk.push({id:S.n++,...o});save()},g=>'Total: '+rp((parseFloat(g('jumlah'))||0)*(parseFloat(g('harga'))||0)))}
+function addKeluar(){form('Pakan keluar',[{k:'tgl',l:'Tanggal',t:'date',v:today()},{k:'petani',l:'Petani',opts:petOpts()},{k:'kode',l:'Kode pakan',list:kodes()},{k:'jumlah',l:'Jumlah (sak)',t:'number'},{k:'harga',l:'Harga jual ke petani per sak (Rp)',t:'number'}],
+ o=>{o.kode=o.kode.trim();if(!o.kode||!o.jumlah)return alert('Isi kode dan jumlah.')&&false;
+ if(!o.harga)return alert('Isi harga jual.')&&false;
+ if(o.jumlah>stok(o.kode)&&!confirm('Stok '+o.kode+' hanya '+stok(o.kode)+' sak. Tetap simpan?'))return false;S.keluar.push({id:S.n++,...o});save()},g=>{const k=g('kode').trim(),q=parseFloat(g('jumlah'))||0,t=g('tgl'),m=hbeli(k,t)||hg(k,t).beli||hpp(k,t),h=parseFloat(g('harga'))||0;return 'Harga beli (otomatis): '+rp(m)+'/sak · Total ke petani: '+rp(q*h)+' · Untung: '+rp(q*(h-m))})}
+function addUang(tipe){form(tipe=='in'?'Catat pemasukan (jual ikan)':'Catat pengeluaran lain',[{k:'tgl',l:'Tanggal',t:'date',v:today()},{k:'petani',l:'Petani',opts:petOpts()},{k:'ket',l:tipe=='in'?'Keterangan (misal: panen 120 kg nila)':'Keterangan (misal: upah, listrik, solar)'},{k:'jumlah',l:'Jumlah (Rp)',t:'number'}],
+ o=>{if(!o.jumlah)return alert('Isi jumlah.')&&false;S.uang.push({id:S.n++,tipe,...o});save()})}
+
+function recap(){return S.petani.map(p=>{
+ const pakanRp=S.keluar.filter(r=>r.petani==p.id&&inM(r)).reduce((a,r)=>a+r.jumlah*hj(r),0);
+ const untungPakan=S.keluar.filter(r=>r.petani==p.id&&inM(r)).reduce((a,r)=>a+untung(r),0);
+ const budRp=S.bud.filter(r=>r.petani==p.id&&inM(r)).reduce((a,r)=>a+r.jumlah*r.harga,0);
+ const lainRp=S.uang.filter(r=>r.petani==p.id&&r.tipe=='out'&&inM(r)).reduce((a,r)=>a+r.jumlah,0);
+ const keluar=pakanRp+budRp+lainRp;
+ const masuk=S.uang.filter(r=>r.petani==p.id&&r.tipe=='in'&&inM(r)).reduce((a,r)=>a+r.jumlah,0);
+ const sak=S.keluar.filter(r=>r.petani==p.id&&inM(r)).reduce((a,r)=>a+r.jumlah,0);
+ const laba=masuk-keluar;return{p,keluar,pakanRp,budRp,lainRp,untungPakan,masuk,sak,laba,bagi:Math.max(laba,0)*p.bagi/100}})}
+function recapHtml(){return recap().map(r=>`<div class="card"><b>${esc(r.p.nama)}</b> <span class="mut">(bagi hasil ${r.p.bagi}%)</span>
+<div class="line"><span>Pemasukan (hasil jual ikan)</span><span class="in">${rp(r.masuk)}</span></div>
+<div class="line"><span class="mut">Pakan dipakai: ${r.sak} sak</span><span class="out">${rp(r.pakanRp)}</span></div>
+<div class="line"><span class="mut">Bibit, obat &amp; budidaya</span><span class="out">${rp(r.budRp)}</span></div>
+<div class="line"><span class="mut">Pengeluaran lain</span><span class="out">${rp(r.lainRp)}</span></div>
+<div class="line"><span>Total pengeluaran</span><span class="out">${rp(r.keluar)}</span></div>
+<div class="line"><span>Laba (pemasukan − pengeluaran)</span><span>${rp(r.laba)}</span></div>
+<div class="line"><b>Bagi hasil</b><b>${rp(r.bagi)}</b></div></div>`).join('')}
+const tbl=(head,rows)=>rows.length?`<div class="card tw"><table><tr>${head.map(h=>`<th>${h}</th>`).join('')}<th></th></tr>${rows.join('')}</table></div>`:'<div class="empty">Belum ada catatan.</div>';
+const delBtn=(l,id)=>`<td><button class="x" onclick="del('${l}',${id})" aria-label="Hapus">Hapus</button></td>`;
+const monthPick=()=>`<div class="row"><label style="margin:0">Periode</label><input type="month" value="${bulan}" onchange="bulan=this.value;render()" style="width:auto"><button class="b alt" onclick="bulan='';render()">Semua</button></div>`;
+
+function render(){
+ $('#nav').innerHTML=TABS.map(t=>`<button class="${t[0]==tab?'on':''}" onclick="tab='${t[0]}';render()">${t[1]}</button>`).join('');
+ let h='';
+ if(tab=='dash'){
+  const R=recap(),tm=R.reduce((a,r)=>a+r.masuk,0),tk=R.reduce((a,r)=>a+r.keluar,0),tu=R.reduce((a,r)=>a+r.untungPakan,0),ts=kodes().reduce((a,k)=>a+stok(k),0);
+  const nm=bulan?new Date(bulan+'-01T00:00').toLocaleDateString('id-ID',{month:'long',year:'numeric'}):'Semua catatan';
+  h=`<h2>${nm}</h2>${monthPick()}<div class="grid"><div class="stat"><small>👨‍🌾 Petani</small><b>${S.petani.length}</b></div><div class="stat"><small>🌾 Stok pakan</small><b>${ts} sak</b></div><div class="stat"><small>Total jual ikan</small><b class="in">${rp(tm)}</b></div><div class="stat"><small>Total pengeluaran</small><b class="out">${rp(tk)}</b></div><div class="stat"><small>Untung pakan (pemilik)</small><b class="in">${rp(tu)}</b></div></div><h3>Rekap petani</h3>${recapHtml()}
+  <h3>Cadangan data</h3><p class="mut">Data tersinkron ke semua perangkat yang membuka halaman ini. <b id="sync"></b> Tetap unduh cadangan secara berkala.</p><div class="row"><button class="b alt" onclick="exp()">Unduh cadangan</button><label class="b alt" style="margin:0">Pulihkan dari file<input type="file" accept=".json" onchange="imp(this)" hidden></label></div>`;
+ }
+ if(tab=='petani')h=`<h2>Petani</h2><div class="row"><button class="b" onclick="addPetani()">+ Tambah petani</button></div>`+S.petani.map(p=>`<div class="card line"><span><b>${esc(p.nama)}</b> <span class="mut">bagi hasil ${p.bagi}%</span></span><span><button class="b alt" onclick="addPetani(S.petani.find(x=>x.id==${p.id}))">Ubah</button> <button class="x" onclick="delPetani(${p.id})">Hapus</button></span></div>`).join('');
+ if(tab=='bud')h=`<h2>Budidaya</h2><div class="row"><button class="b" onclick="addBud()">+ Tambah transaksi</button></div>`+tbl(['Tanggal','Petani','Jenis','Jumlah','Harga','Total'],[...S.bud].sort((a,b)=>b.tgl.localeCompare(a.tgl)).map(r=>`<tr><td>${tg(r.tgl)}</td><td>${esc(pn(r.petani))}</td><td>${esc(r.jenis)}</td><td class="r">${r.jumlah.toLocaleString('id-ID')}</td><td class="r">${rp(r.harga)}</td><td class="r">${rp(r.jumlah*r.harga)}</td>${delBtn('bud',r.id)}</tr>`));
+ if(tab=='pakan'){const ks=kodes();h=`<h2>Pakan</h2><div class="row"><button class="b" onclick="addMasuk()">+ Pakan masuk</button><button class="b" onclick="addKeluar()">+ Pakan keluar</button></div><h3>Stok</h3>`+(ks.length?`<div class="card tw"><table><tr><th>Kode</th><th class="r">Masuk</th><th class="r">Keluar</th><th class="r">Stok</th></tr>${ks.map(k=>`<tr><td>${esc(k)}</td><td class="r">${S.masuk.filter(r=>r.kode==k).reduce((a,r)=>a+r.jumlah,0)}</td><td class="r">${S.keluar.filter(r=>r.kode==k).reduce((a,r)=>a+r.jumlah,0)}</td><td class="r"><b>${stok(k)} sak</b></td></tr>`).join('')}</table></div>`:'<div class="empty">Belum ada pakan. Mulai dengan “+ Pakan masuk”.</div>')+
+  `<h3>Pakan masuk</h3>`+tbl(['Tanggal','Kode','Jumlah','Harga','Keterangan'],[...S.masuk].sort((a,b)=>b.tgl.localeCompare(a.tgl)).map(r=>`<tr><td>${tg(r.tgl)}</td><td>${esc(r.kode)}</td><td class="r">${r.jumlah} sak</td><td class="r">${rp(r.harga)}</td><td>${esc(r.ket)}</td>${delBtn('masuk',r.id)}</tr>`))+
+  `<h3>Pakan keluar</h3>`+tbl(['Tanggal','Petani','Kode','Jumlah','Harga beli','Harga jual','Total','Untung'],[...S.keluar].sort((a,b)=>b.tgl.localeCompare(a.tgl)).map(r=>`<tr><td>${tg(r.tgl)}</td><td>${esc(pn(r.petani))}</td><td>${esc(r.kode)}</td><td class="r">${r.jumlah} sak</td><td class="r">${rp(bm(r))}</td><td class="r">${rp(hj(r))}</td><td class="r">${rp(r.jumlah*hj(r))}</td><td class="r in">${rp(untung(r))}</td>${delBtn('keluar',r.id)}</tr>`))}
+ if(tab=='uang')h=`<h2>Keuangan &amp; Laporan</h2>${monthPick()}<div class="row"><button class="b" onclick="addUang('in')">+ Pemasukan (jual ikan)</button><button class="b" onclick="addUang('out')">+ Pengeluaran lain</button></div><p class="mut" style="margin:0 0 14px;font-size:13.5px"><b>Pemasukan</b> = uang dari penjualan ikan petani. <b>Pengeluaran lain</b> = biaya di luar pakan dan bibit/obat (misal upah, listrik, solar, perbaikan kolam). Pakan dan bibit/obat sudah otomatis dihitung dari tab Pakan dan Budidaya, jadi tidak perlu dicatat lagi di sini.</p>`+tbl(['Tanggal','Jenis','Petani','Keterangan','Jumlah'],[...S.uang].filter(inM).sort((a,b)=>b.tgl.localeCompare(a.tgl)).map(r=>`<tr><td>${tg(r.tgl)}</td><td class="${r.tipe}">${r.tipe=='in'?'Pemasukan (jual ikan)':'Pengeluaran lain'}</td><td>${esc(pn(r.petani))}</td><td>${esc(r.ket)}</td><td class="r">${rp(r.jumlah)}</td>${delBtn('uang',r.id)}</tr>`))+`<h3>Rekap per petani</h3>${recapHtml()}`;
+ $('#app').innerHTML=h;
+}
+function exp(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(S)],{type:'application/json'}));a.download='matungkas-cadangan-'+today()+'.json';a.click()}
+function imp(i){const f=i.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const d=JSON.parse(r.result);if(!d.petani)throw 0;if(confirm('Ganti semua data dengan cadangan ini?')){S=d;ensureHrg();save()}}catch(e){alert('File cadangan tidak valid.')}};r.readAsText(f)}
+render();
+(async()=>{try{DB=await claude.use('db')}catch(e){}
+if(!DB){setSync('Mode lokal: data hanya di perangkat ini.');return}
+dbRef=DB.doc('app/main');
+dbRef.onSnapshot(snap=>{
+ if(!snap.exists){push();return}
+ const j=snap.data().json;
+ if(j===lastJ){setSync('✓ Tersinkron');return}
+ try{const d=JSON.parse(j);if(!d.petani)return;S=d;lastJ=j;ensureHrg();try{localStorage.setItem(K,j)}catch(e){}render();setSync('✓ Tersinkron')}catch(e){}
+},()=>setSync('Gagal terhubung, data tersimpan di perangkat ini.'))})();
+</script>
+</body>
+</html>
